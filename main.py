@@ -92,16 +92,16 @@ def show_score(x, y):
     screen.blit(score, (x, y))
 
 def show_bombs_caught(x, y):
-    bombs = font.render("Bombs Caught: " + str(bombs_caught), True, (255, 255, 255))  # Hiển thị bom đã bắt
+    bombs = font.render("Bombs : " + str(bombs_caught), True, (255, 255, 255))  # Hiển thị bom đã bắt
     screen.blit(bombs, (x, y + 40))
 
 def show_timer():
     if currentTime / 1000 >= 80:
-        timer = font.render("Time: " + str(int(101 - currentTime / 1000)), True, (255, 0, 0))  # Thời gian còn lại
+        timer = font.render("Time: " + str(int(61 - currentTime / 1000)), True, (255, 0, 0))  # Thời gian còn lại
     else:
-        timer = font.render("Time: " + str(int(101 - currentTime / 1000)), True, (255, 255, 255))
-    screen.blit(timer, (1210, 10))
-    if currentTime / 1000 >= 100 or game_over:  # Khi kết thúc trò chơi
+        timer = font.render("Time: " + str(int(61 - currentTime / 1000)), True, (255, 255, 255))
+    screen.blit(timer, (1000, 10))
+    if currentTime / 1000 >= 60 or game_over:  # Khi kết thúc trò chơi
         gameOver_text = gameOver_font.render("Game Over!", True, (255, 0, 0))  # Hiển thị Game Over
         screen.blit(gameOver_text, (width / 2 - 300, height / 2 - 30))
         if pygame.mouse.get_pressed()[0]:  # Nhấn chuột để chơi lại
