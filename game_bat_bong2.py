@@ -58,11 +58,11 @@ for i in range(numberOfBalls):
     BallY.append(random.randint(0, height))
     BallImg.append(pygame.image.load('ball_32.png').convert_alpha())  # Tạo bóng
     Ball_rect.append(BallImg[i].get_rect(topleft=(BallX[i], BallY[i])))  # Vị trí bóng
-    BallMoveX.append(3)  # Tốc độ di chuyển bóng theo chiều X
-    BallMoveY.append(3)  # Tốc độ di chuyển bóng theo chiều Y
+    BallMoveX.append(4)  # Tốc độ di chuyển bóng theo chiều X
+    BallMoveY.append(4)  # Tốc độ di chuyển bóng theo chiều Y
 # Tạo danh sách liên kết lưu thông tin về quả bóng
 BombImg, BombX, BombY, bomb_rect, bombMoveX, bombMoveY = [], [], [], [], [], []
-numberOfBombs = 3
+numberOfBombs = 5
 for i in range(numberOfBombs):
     BombX.append(random.randint(0, width))
     BombY.append(random.randint(0, height))
